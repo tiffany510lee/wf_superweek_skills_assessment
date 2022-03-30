@@ -1,0 +1,124 @@
+<html>
+<head>
+	<title>Add Data</title>
+</head>
+
+<body>
+	<a href="index.php">Home</a>
+	<div id="developernotes">
+		<div style="background-color: #d9d9d9; padding: 10px;">
+			<p style="font-size:12pt;"><b>Developer Notes</b>
+			<br>
+			1. All grey boxes are for informational purposes for the related fields.
+			</br>
+			<br>
+			2. For cells, [Select from drop down], click on cell for drop down, and reference the drop down tab.
+			</br>
+			</p>
+		</div>
+	<h1>Intake Form</h1>
+	<p style="font-size:12pt;">Please fill this intake form to request for resources. Our leadership team will evaluate all submissions and allocate resources to all approved projects.</p>
+	<p style="font-size:12pt;">* Mandatory fields</p>
+	<br/><br/>
+	<form action="add.php" method="post" name="form1">
+        <div id="generalinfo">
+            <div style="background-color: #ffe500; padding: 10px;">
+            <p style="font-size:12pt;"><b> General Information </b></p>
+        </div>
+		<table width="25%" border="0">
+		<tr>
+			<th> 
+				<td><p style="font-size:12pt;">
+                    <b>Project Name *</b>
+                </p>
+                <input type="text" name="name">
+				<td><div id="projectnameinfo">
+                    <div style="background-color: #d9d9d9; padding: 10px;">
+                    <b>Project Name: </b>Character limit of 50. Add auto wrap text feature.
+                </div></td>
+			</th>
+			<th> 
+				<td><p style="font-size:12pt;"><b>Project Chargecode</b></p></td>
+				<td><input type="text" name="name"></td>
+				<td><div id="projectchargecodeinfo">
+                    <div style="background-color: #d9d9d9; padding: 10px;">
+                    <b> Project Chargecode: </b> Cannot be submitted unless 10 characters where first letter has to start with an E, I, or M and cannot be I-12345678, E-12345678, or M-12345678.
+                </div></td>
+			</th>
+			<tr> 
+			<th>
+				<td><p style="font-size:12pt;"><b>Area *</b></p>
+                    <select name="area" id="area" multiple>
+                        <option value="americas">Americas</option>
+                        <option value="europe">Europe</option>
+                        <option value="apac">APAC</option>
+                    </select>
+                </td>
+				<td><div id="areainfo">
+                    <div style="background-color: #d9d9d9; padding: 10px;">
+                    <b> Area: </b> Ability to select more than 1 from the dropdown. Hold down the Ctrl (Windows/Linux) or Command (Mac) button to select multiple options.
+                </div></td>
+			</th>
+			<th> 
+				<td><p style="font-size:12pt;"><b>Region *</b></p>
+                    <select name="region" id="region" multiple>
+                        <option value="northamerica">North America</option>
+                        <option value="southamerica">South America</option>
+                        <option value="europe">Europe</option>
+                        <option value="asia">Asia</option>
+                        <option value="africa">Africa</option>
+                        <option value="india">India</option>
+                    </select>
+                </td>
+				<td><div id="regioninfo">
+                    <div style="background-color: #d9d9d9; padding: 10px;">
+                    <b> Region: </b> Ability to select more than 1 from drop down. Hold down the Ctrl (Windows/Linux) or Command (Mac) button to select multiple options.
+                </div></td>
+            </th>
+			</tr>
+		</table>
+        <div id="projectdetails">
+            <div style="background-color: #ffe500; padding: 10px;">
+            <p style="font-size:12pt;"><b> Project Details </b></p>
+        </div>
+        <table width="25%" border="0">
+			<tr>
+			<th>
+				<td><p style="font-size:12pt;"><b>Current State Technology/Application *</b></p>
+                    <select name="currstate" id="currstate" multiple>
+                        <option value="notstarted">Not started</option>
+                        <option value="inprogress">In Progress</option>
+                        <option value="complete">Complete</option>
+                        <option value="enhancement">Enhancement</option>
+                        <option value="other">Other</option>
+                    </select>
+				<td><div id="currstateinfo">
+                    <div style="background-color: #d9d9d9; padding: 10px;">
+                    <b> Current State Technology/Application: </b> Ability to add more than 1 from the drop down. Hold down the Ctrl (Windows/Linux) or Command (Mac) button to select multiple options. If Other is selected in the drop down list, please fill in the open text mandatory field will pop up called Current State Technology/Application Other.
+                </div></td>
+			</th>            
+			<th> 
+				<td><p style="font-size:12pt;"><b>Current State Technology/Application Other</b></p></td>
+				<td><input type="text" name="name"></td>
+				<td><div id="currstateotherinfo">
+                    <div style="background-color: #d9d9d9; padding: 10px;">
+                    <b> Current State Technology/Application: </b> If Other is selected in the drop down list, please fill in the open text mandatory field.
+                </div></td>
+            <th>
+			</tr>
+			<tr> 
+				<td><p style="font-size:12pt;"><b>Target Deadline</b></p>
+				<p style="font-size:12pt;">If no target deadline, leave blank</p></td>
+				<td><input type="text" name="name"></td>
+				<td><div id="currentstatetechappinfo">
+                    <div style="background-color: #d9d9d9; padding: 10px;">
+                    <b> Target Project Deadline: </b> Cannot select a date less than today's date. Date Format should be MM-DD-YYYY.
+                    
+                    Example: If today's date is June 23, 2021, target deadline cannot be a date before June 23, 2021.
+                </div></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+
